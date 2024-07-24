@@ -2,15 +2,16 @@ apply plugin: 'com.android.application'
 
 android {
 
-    compileSdk 33
+    namespace 'com.dhanuka.safeobuddy'
+    compileSdk 34
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     defaultConfig {
         applicationId "com.codersworld.qr.scanner"
         minSdk 23 //change back to 19
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0.1"
         multiDexEnabled true
@@ -33,6 +34,10 @@ android {
             abortOnError false
         }
     }
+    viewBinding {
+        enabled = true
+    }
+
     dataBinding {
         enabled = true
     }
